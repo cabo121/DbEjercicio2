@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<title>Deportes</title>
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+<body>
+
+	<div class="p-3">
+		<br>
+		<h1>Comentarios de los usuarios</h1>
+		<br>
+		<hr>
+
+		<div>
+	        
+	        <table class="table">
+	            <thead>
+	                <tr>
+	                    <th>Usuario</th>
+	                    <th>Comentario</th>
+	                    <th>Fecha</th>
+	                </tr>
+	            </thead>
+	            {% for comentarios in listado_comentarios %}
+	            <tbody>
+	                <td>{{ comentarios.usuario }}</td>
+	                <td>{{ comentarios.comentario }}</td>
+	                <td>{{ comentarios.fecha }}</td>
+	            </tbody>
+	            {% endfor %}
+	        </table>
+	        
+	    </div>
+	</div>
+	
+
+</body>
+
+{% endblock content %}

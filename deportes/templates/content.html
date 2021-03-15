@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<title>Deportes</title>
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+<body>
+
+	<div class="p-3">
+		<br>
+		<h1>Listado de los articulos</h1>
+		<br>
+		<hr>
+
+		<div>
+	        
+	        <table class="table">
+	            <thead>
+	                <tr>
+	                    <th>Nombre</th>
+	                    <th>Descripcion</th>
+	                    <th>Tipo</th>
+	                </tr>
+	            </thead>
+	            {% for articulos in listado_articulos %}
+	            <tbody>
+	                <td>{{ articulos.nombre }}</td>
+	                <td>{{ articulos.descripcion }}</td>
+	                <td>{{ articulos.tipo }}</td>
+	            </tbody>
+	            {% endfor %}
+	        </table>
+	        
+	    </div>
+	</div>
+	
+
+</body>
+
+{% endblock content %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<div class="jumbotron p-4">
+  <h1 class="display-4"><strong>Bienvenido</strong></h1>
+  <p class="lead">Armando Cabral Martinez 15131296</p>
+  <hr class="my-4">
+  <p>Esta pagina esta hecha con django, contiene una base de datos de
+  3 modelos con 3 campos cada una</p>
+  <img src="{% static 'images/portada.jpg' %}" height="450" width="900" class="col-md-12">
+  <br>
+  <br>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="{% url 'home' %}" role="button">Ver mas..</a>
+  </p>
+</div>
+
+
+
+{% endblock content %}

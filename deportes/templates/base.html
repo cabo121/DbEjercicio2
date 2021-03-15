@@ -1,0 +1,24 @@
+{% load static %}
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+</head>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{% url 'principal' %}">Principal</a>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" href="{% url 'home' %}">Inicio</a>
+              <a class="nav-link active" href="{% url 'content' %}">Contenido</a>
+              <a class="nav-link active" href="{% url 'about' %}">Acerca de</a>
+            </div>
+          </div>
+        </div>
+    </nav>
+</header>
+
+{% block content %}
+
+{% endblock content %}
