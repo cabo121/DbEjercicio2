@@ -10,7 +10,7 @@ class HomePageView(ListView):
 class ContentPageView(ListView):
 	model = articulo
 	template_name = 'content.html'
-	context_object_name = 'listado_articulo'
+	context_object_name = 'listado_articulos'
 
 class AboutPageView(ListView):
 	model = comentarios

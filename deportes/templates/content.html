@@ -19,14 +19,14 @@
 	                <tr>
 	                    <th>Nombre</th>
 	                    <th>Descripcion</th>
-	                    <th>Tipo</th>
+	                    <th>Imagen</th>
 	                </tr>
 	            </thead>
-	            {% for articulos in listado_articulos %}
+	            {% for articulo in listado_articulos %}
 	            <tbody>
-	                <td>{{ articulos.nombre }}</td>
-	                <td>{{ articulos.descripcion }}</td>
-	                <td>{{ articulos.tipo }}</td>
+	                <td>{{ articulo.nombre }}</td>
+	                <td>{{ articulo.descripcion }}</td>
+	                <td><img src="{{ articulo.imagen }}"></td>
 	            </tbody>
 	            {% endfor %}
 	        </table>
